@@ -1,0 +1,11 @@
+.star {
+  cursor: pointer;
+  background: yellow;
+  color: black;
+}
+.on {
+  color: #000;
+}
+.off {
+  color: #ccc;
+}

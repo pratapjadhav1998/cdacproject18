@@ -1,0 +1,9 @@
+div .rthome-image {
+  background-image: url("../data/rhome.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 550px;
+  width: 100%;
+  color: white;
+}

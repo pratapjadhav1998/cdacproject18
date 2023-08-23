@@ -1,0 +1,12 @@
+.signin-button {
+  background-color: black !important;
+}
+
+.bg-image {
+  /* max-height: 400px; */
+  background-image: url("../data/loginpic.jpg");
+  /* float: left;
+  background-position: left;
+  width: 50%;
+  background-size: cover; */
+}
