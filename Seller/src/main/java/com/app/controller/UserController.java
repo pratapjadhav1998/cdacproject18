@@ -51,10 +51,7 @@ public class UserController {
 		
 		@PostMapping("/checkUser/{email}")
 		   public ResponseEntity<User> checkUserByEmail(@PathVariable String email) {
-//			if(user.checkUserByEmail(email)!=null) {
-//				return user.checkUserByEmail(email);
-//			}
-//			return null;
+
 			   return new ResponseEntity<>(user.checkUserByEmail(email),HttpStatus.OK);   
 		}
 		@DeleteMapping("/checkUser/{userId}")

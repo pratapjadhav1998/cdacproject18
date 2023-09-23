@@ -15,14 +15,14 @@ public interface UserRepository extends JpaRepositoryImplementation<User, Intege
 	@Query("select u from User u where u.id = ?1")
 	  User findByaddressid(int id);
 	
-	//User findById(int id);
-//	
+
+	
 	@Query("select u.id from User u where u.role='FARMER' ")
   List<Integer> findAllfarmerswithId();
 
 	@Query("select u from User u where u.role='FARMER' ")
 	List<User>findAllfarmerswithlist();
-	//List<User> findByRoleStartingWith(String string);
+	
 	
 	
 	@Query("select u.id from User u where u.role='CUSTOMER' ")
@@ -33,7 +33,6 @@ public interface UserRepository extends JpaRepositoryImplementation<User, Intege
 	
 	
 	
-	//select * from users where role <> "ADMIN" and average_review<1.5
 		@Query(value = "SELECT * FROM users WHERE role <> \"ADMIN\" AND average_review<2 AND review_count !=0", nativeQuery = true)
 		List<User> findAllwithleastReview();
 		
@@ -45,6 +44,5 @@ public interface UserRepository extends JpaRepositoryImplementation<User, Intege
 		Integer findAllcountcustomer();
 
 
-	//User findById(int id);
 
 }

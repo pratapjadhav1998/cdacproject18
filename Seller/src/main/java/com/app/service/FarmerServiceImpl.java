@@ -32,14 +32,7 @@ public class FarmerServiceImpl implements IFarmerService {
 	public List<Farmer_Product> getFarmerItemList(int id) {
 		System.out.println("inside customer repo");
 		List<Farmer_Product> itemlist = itemss.findByFarmerIdOrderByIdDesc(id);
-//		List<farmer_Product> item = itemss.findAll();
-//		for (farmer_Product i : item) {
-//			System.out.println("inside for" + i);
-//			if (i.getFarmer().getId() == id) {
-//				System.out.println("inside if" + i);
-//				itemlist.add(i);
-//			}
-//		}
+
 		
 		return itemlist;
 //		throw new UserHandlingException("Email Not Found !!!");
@@ -79,20 +72,7 @@ public class FarmerServiceImpl implements IFarmerService {
 
 	@Override
 	public Farmer_Product deleteItem(int id, int userid) {
-//		List<Customer_Product>  item = items.findByCustomerId(userid);
-//		System.out.println("inside SERVICE DELETE"+item);
-//		for(Customer_Product i:item)
-//		{
-//			if(i.getProduct().getId()==itemId)
-//			{
-////				Customer_Product updatedItem=items.save(i);
-//				item.remove(i);
-//				System.out.println("REMOVED PRODUCT"+i);
-//				List<Customer_Product> updatedItem=items.saveAll(item);
-//				System.out.println("UPDATED LIST"+updatedItem);	
-//				return updatedItem;
-//			}
-//		}
+
 
 		System.out.println("INSIDE DELETE METHOD of FARMER " + id + userid);
 		Farmer_Product item = itemss.findByProductIdAndFarmerId(id, userid);

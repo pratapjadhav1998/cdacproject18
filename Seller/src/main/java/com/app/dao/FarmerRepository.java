@@ -9,14 +9,11 @@ import com.app.pojos.Products;
 import com.app.pojos.Customer_Product;
 import com.app.pojos.Farmer_Product;
 
-//import com.app.pojo.User;
+
 
 public interface FarmerRepository extends JpaRepositoryImplementation<Farmer_Product, Integer> {
-//
-//	wholesaler_Product findByEmailAndPassword(String email, String password);
-//
-//	Optional<wholesaler_Product> findByEmail(String email);
-//	
+
+	
 
 	List<Farmer_Product> findAll();
 
@@ -28,8 +25,7 @@ public interface FarmerRepository extends JpaRepositoryImplementation<Farmer_Pro
 
 	List<Farmer_Product> findByProductId(int proid);
 
-//	Farmer_Product findByFarmerId(int farmerid);
-	//select * from wholesaler_product where farmer_id=10;
+
 	@Query(value = "select * from farmer_product where farmer_id=?", nativeQuery = true)
 	Farmer_Product findmyFarmerId(int farmerid);
 }

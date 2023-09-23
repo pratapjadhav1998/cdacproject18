@@ -10,7 +10,7 @@ public interface UserRepository2 extends JpaRepositoryImplementation<User, Integ
 
 	User findByEmailAndPassword(String email, String password);
 
-//	Optional<User> findByEmail(String email);
+
 	
 
 }

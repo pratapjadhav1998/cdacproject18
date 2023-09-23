@@ -1,15 +1,16 @@
 div .bg-image1 {
-  background-image: url("../data/homepic.jpg");
+  /* background-image: url("../data/homepic.jpg"); */
+  
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   height: 700px;
   width: 100%;
-  color: white;
+  color: rgb(20, 3, 3);
   
 }
 div .bg-image2 {
-  background-image: url("../data/rhome.jpg");
+  /* background-image: url("../data/rhome.jpg"); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -27,6 +28,8 @@ div .bg-image2 {
   text-shadow: 2px;
 }
 .bg-image1 .text-header {
+ 
+  margin: auto;
   float: right;
   margin-right: 5%;
   margin-top: 10%;
@@ -75,7 +78,7 @@ div .bg-image2 {
 }
 
 div .bg-image3 {
-  background-image: url("../data/rhome.jpg");
+  /* background-image: url("../data/rhome.jpg"); */
   /* background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -84,7 +87,7 @@ div .bg-image3 {
   color: white; */
 }
 div .bg-image4 {
-  background-image: url("../data/wh1.jpg");
+  /* background-image: url("../data/wh1.jpg"); */
   /* background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -93,7 +96,7 @@ div .bg-image4 {
   color: white; */
 }
 div .bg-image6 {
-  background-image: url("../data/wh1.jpg");
+  /* background-image: url("../data/wh1.jpg"); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

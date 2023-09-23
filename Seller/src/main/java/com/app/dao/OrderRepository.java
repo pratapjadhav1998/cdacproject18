@@ -17,11 +17,7 @@ public interface OrderRepository extends JpaRepositoryImplementation<Order, Inte
 	List<Order> findByFarmerIdOrderByIdDesc(int id);
 
 	List<Order> findByCustomerIdOrderByIdDesc(int id);
-	//Order findByWholesalerIdAndRetailerIdAndProductId(int farmerid, int customerid, int productid);
-	 
-		//@Query(value = "SELECT AVG(review) FROM ORDER WHERE wholesaler_id = ?1", nativeQuery = true)
-		
-//		@Query("SELECT AVG(review) FROM Order WHERE wholesaler_id = ?")
+
 		
 		@Query(value = "SELECT AVG(review) FROM orders WHERE farmer_id=?", nativeQuery = true)
 		Double findAverageReview(double wholelist2);
@@ -29,8 +25,7 @@ public interface OrderRepository extends JpaRepositoryImplementation<Order, Inte
 		@Query(value = "select count(review) from orders where farmer_id=?", nativeQuery = true)
 		Integer findCountReview(int wholelist2);
 		
-		////Integer findAverageReview(int wholelist2);
-		//List<Integer>
+
 		
 		@Query(value = "SELECT AVG(creview) FROM orders WHERE customer_id=?", nativeQuery = true)
 		Double findAverageReviewcustomer(double wholelist2);

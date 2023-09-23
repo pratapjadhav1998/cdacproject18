@@ -1,5 +1,5 @@
 div .rthome-image {
-  background-image: url("../data/rhome.jpg");
+  /* background-image: url("../data/rhome.jpg"); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -10,7 +10,7 @@ div .rthome-image {
 .bg-image3{
   /* padding-left: 0; */
   /* padding-right: 0; */
-  background-image: url("../data/rhome.jpg");
+  /* background-image: url("../data/rhome.jpg"); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

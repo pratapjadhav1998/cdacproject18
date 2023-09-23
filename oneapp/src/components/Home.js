@@ -3,6 +3,8 @@ import React, { Component } from "react";
 // import image1 from "../data/foodframe.jpg";
 // import image2 from "../data/penne.jpg";
 import "./Home.css";
+import { colors } from "@material-ui/core";
+import { fontGrid } from "@mui/material/styles/cssUtils";
 
 class Home extends Component {
   render() {
@@ -20,11 +22,11 @@ class Home extends Component {
       <>
         <div class="bg-image1">
           <div class="text-header">
-            <h1>
+            <h1 style={{color:'red' }}>
               {" "}
-              <b>Welcome to FarmFresh Network</b>
+              <b style={{textAlign:"center"}}>Welcome to FarmFresh Network</b>
             </h1>
-            <h5>
+            <h5 style={{color:'black'}}>
               <b>
                 <i>Order in no time</i>
               </b>

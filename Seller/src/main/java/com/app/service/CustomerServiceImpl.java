@@ -33,33 +33,11 @@ public class CustomerServiceImpl implements ICustomerService {
 	@Override
 	public List<Customer_Product> getCustomerItemList(int id) {
 		System.out.println("inside customer repo");
-//		List<Retailer_Product> itemlist=new ArrayList<>();
-//		List<Retailer_Product> item=items.findAll();
-//		for(Retailer_Product i:item) {
-//			System.out.println("inside for"+i);
-//			if(i.getRetailer().getId()==id) {
-//				System.out.println("inside if"+i);
-//				itemlist.add(i);
-//			}
+
 		List<Customer_Product> itemlist = items.findByCustomerIdOrderByIdDesc(id);
 		return itemlist;
 	}
-//		throw new UserHandlingException("Email Not Found !!!");
 
-//	
-
-//	@Override
-//	public Retailer_Product updateQuantity(int id, int quantity, int userid) {
-//		System.out.println("INSIDE UPDATE METHOD"+id+quantity+userid);
-//		Retailer_Product item = items.findById(id).orElse(null);
-//		if(item!=null)
-//		{
-//			item.setQuantity(quantity);
-//			Retailer_Product updatedItem=items.save(item);
-//			return updatedItem;
-//		}
-//		throw new UserHandlingException("Please Enter a Valid Item Id");
-//	}
 
 	@Override
 	public List<Customer_Product> getAllItemList() {
@@ -77,15 +55,7 @@ public class CustomerServiceImpl implements ICustomerService {
 		System.out.println("INSIDE UPDATE METHOD" + id + quantity + userid);
 		Customer_Product item = items.findByProductIdAndCustomerId(id, userid);
 		System.out.println("FOUND PRODUCT" + item);
-//		for(Retailer_Product i:item)
-//		{
-//			if(i.getProduct().getId()==id)
-//			{
-//				i.setQuantity(quantity);
-//				Retailer_Product updatedItem=items.save(i);
-//				return updatedItem;
-//			}
-//		}
+
 		item.setQuantity(quantity);
 		Customer_Product updatedItem = items.save(item);
 		return updatedItem;
@@ -94,20 +64,7 @@ public class CustomerServiceImpl implements ICustomerService {
 
 	@Override
 	public Customer_Product deleteItem(int id, int userid) {
-//		List<Retailer_Product>  item = items.findByRetailerId(userid);
-//		System.out.println("inside SERVICE DELETE"+item);
-//		for(Retailer_Product i:item)
-//		{
-//			if(i.getProduct().getId()==itemId)
-//			{
-////				Retailer_Product updatedItem=items.save(i);
-//				item.remove(i);
-//				System.out.println("REMOVED PRODUCT"+i);
-//				List<Retailer_Product> updatedItem=items.saveAll(item);
-//				System.out.println("UPDATED LIST"+updatedItem);	
-//				return updatedItem;
-//			}
-//		}
+
 
 		System.out.println("INSIDE DELETE METHOD" + id + userid);
 		Customer_Product item = items.findByProductIdAndCustomerId(id, userid);
@@ -151,11 +108,7 @@ public class CustomerServiceImpl implements ICustomerService {
 		return null;
 
 	}
-	// }
-//		else {
-//			throw new UserHandlingException("Enter a valid Details Of product !!!");
-//		}
-//		return null;
+	
 
 	@Override
 	public List<Customer_Product> getFilteredItemList(int id) {

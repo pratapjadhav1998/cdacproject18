@@ -63,16 +63,7 @@ public class OrderServiceImpl implements IOrderService {
 	@Override
 	public List<Order> getallorders(int id) {
 		System.out.println("inside order repo to get all orders");
-//		List<Order> orderlist=new ArrayList<>();
-//		List<Order> item=order.findAll();
-//		for(Order i:item) {
-//			System.out.println("inside for"+i);
-//			if(i.getRetailer().getId()==id) {
-//				System.out.println("inside if"+i);
-//				orderlist.add(i);
-//			}
-//		}
-//		System.out.println("filered items"+orderlist);
+
 		List<Order> orders=order.findByCustomerIdOrderByIdDesc(id);
 		System.out.println("order list is :######"+orders);
 		return orders;
@@ -101,16 +92,7 @@ public class OrderServiceImpl implements IOrderService {
 	@Override
 	public List<Order> getfarmerorders(int id) {
 		System.out.println("inside order repo farmer to get all orders");
-//		List<Order> orderlist=new ArrayList<>();
-//		List<Order> item=order.findAll();
-//		for(Order i:item) {
-//			System.out.println("inside for"+i);
-//			if(i.getRetailer().getId()==id) {
-//				System.out.println("inside if"+i);
-//				orderlist.add(i);
-//			}
-//		}
-//		System.out.println("filered items"+orderlist);
+
 		List<Order> orders=order.findByFarmerIdOrderByIdDesc(id);
 		return orders;
 	}
